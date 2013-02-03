@@ -14,7 +14,7 @@ require_relative 'lib/lazy_series'
 
 module ProjectEuler
   module_function
-  def problem_2(max=4e6)
+  def problem_2(max: 4e6)
     LazySeries::Fibonacci.terms.even.below(max).sum
   end
 end
