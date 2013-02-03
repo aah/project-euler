@@ -19,6 +19,12 @@ describe Enumerator::Lazy do
     end
   end
 
+  context "#multiples" do
+    it "generates the multiples of one or more divisors" do
+      @lazy_range.multiples([3, 5]).to_a.should eq([3, 5, 6, 9, 10])
+    end
+  end
+
   context "#sum" do
     it "sums the values of a lazy enumerator" do
       @lazy_range.sum.should eq((1..10).reduce(:+))
